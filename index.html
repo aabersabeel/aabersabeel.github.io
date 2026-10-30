@@ -1,5 +1,21 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>عابر سبيل | Aaber Sabeel</title>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>عابر سبيل | Aaber Sabeel — فنّ عربي برسالة إنسانية</title>
+<meta name="description" content="عابر سبيل علامة إبداعية تجمع الفنّ والكلمات العربية والعمل الخيري، وتحول العبارات الهادفة إلى قطع فنية تحمل معنى وأثرًا إنسانيًا.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://aabersabeel.tn/">
+<meta name="theme-color" content="#0b0a09">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_TN">
+<meta property="og:site_name" content="عابر سبيل | Aaber Sabeel">
+<meta property="og:title" content="عابر سبيل | Aaber Sabeel — فنّ عربي برسالة إنسانية">
+<meta property="og:description" content="فنّ عربي وكلمات هادفة وعمل خيري؛ قطع تحمل معنى وأثرًا يتجاوز الشكل.">
+<meta property="og:url" content="https://aabersabeel.tn/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="عابر سبيل | Aaber Sabeel">
+<meta name="twitter:description" content="علامة إبداعية تجمع الفنّ والكلمات العربية والعمل الخيري.">
+</head><body>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -620,6 +636,13 @@ html[lang="en"] .donate-band h3{font-size:clamp(1.4rem,2.6vw,1.9rem);line-height
   function applyLang(l,persist){
     lang=l;
     root.lang=l;root.dir=l==="ar"?"rtl":"ltr";
+    document.title = l==="en"
+      ? "Aaber Sabeel | Arabic Art with a Human Mission"
+      : "عابر سبيل | Aaber Sabeel — فنّ عربي برسالة إنسانية";
+    var description = document.querySelector('meta[name="description"]');
+    if(description) description.content = l==="en"
+      ? "Aaber Sabeel brings together Arabic art, meaningful words and charitable work, turning thoughtful messages into pieces with purpose."
+      : "عابر سبيل علامة إبداعية تجمع الفنّ والكلمات العربية والعمل الخيري، وتحول العبارات الهادفة إلى قطع فنية تحمل معنى وأثرًا إنسانيًا.";
     $$("[data-en]").forEach(function(el){el.innerHTML=l==="en"?el.getAttribute("data-en"):el.getAttribute("data-ar")});
     $("#lang").textContent=l==="ar"?"EN":"ع";
     $("#lang").setAttribute("aria-label",l==="ar"?"Switch to English":"التبديل إلى العربية");
